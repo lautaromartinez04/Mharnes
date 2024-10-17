@@ -3,6 +3,7 @@ import "../assets/css/inicio.css"
 
 export const Inicio = () => {
   return (
-    <div className='inicio'>Inicio</div>
+    <div className='inicio'>
+    </div>
   )
 }

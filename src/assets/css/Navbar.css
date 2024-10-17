@@ -1,6 +1,6 @@
 .barra{
     height: 20vh;
-    background-color: #1D71B8;
+    background-color: #1d71b7;
     display: flex;
     justify-content: center;
 }
@@ -20,5 +20,9 @@ img{
     img{
         height: 10Vh;
         margin: 2.5vh;
+    }
+
+    .barra{
+        height: 22vh;
     }
   }

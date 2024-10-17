@@ -1,9 +1,18 @@
+@font-face {
+    font-family: "SegoeBold";
+    src: url('../fonts/SegoeTVBold.TTF');
+}
+
+
 .opciones{
+    font-family: "SegoeBold";
     width: 80vw;
     height: 5vh;
     border-radius: 15px;
-    background: #1D71B8;
+    background: #1d71b7;
     border: white solid 2px;
+    font-size: 2vh;
+    padding: 0;
 }
 
 .navbar-nav{
@@ -12,14 +21,51 @@
     justify-content: space-around;
 }
 
+.dropdown-menu{
+    text-align: center;
+}
+
+/* Estilos del dropdown */
+.dropdown-menu {
+    background-color: #1d71b7;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 0;
+    text-align: center; /* Centrar los elementos */
+     /* Centrar horizontalmente */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); /* Mover hacia arriba inicialmente */
+}
+
+/* Mostrar el dropdown de manera suave */
+.dropdown-menu.show {
+    left: 50%;
+    transform: translate(-50%,2px);
+    opacity: 1;
+    visibility: visible;
+    
+}
+
+/* Estilos para los ítems del dropdown */
+.dropdown-item {
+    color: white !important;
+    padding: 0.5vh 1vw;
+}
+
+.dropdown-item:hover {
+    background-color: #155a8a;
+    color: white !important;
+}
 
 @media (max-width: 768px) {
 
     .opciones{
         border: none;
     }
+    
     .navbar-collapse{
-        background-color: #1D71B8;
+        background-color: #1d71b7;
         border-radius: 0 0 15px 15px ;
     }
 
@@ -28,5 +74,27 @@
         text-align: center;
     }
 
+    .dropdown-menu.show {
+        left: 0;
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        border: #155a8a solid 1px;
+    }
+
+    .opciones{
+        height: 8vh;
+        display: none;
+    }
+
+    #navbarNavDropdown{
+        transform: translateY(-3vh);
+        margin: 0 !important;
+        padding-top: 3vh;
+    }
     
+    .navbar-toggler{
+        margin: 1.6vh;
+        z-index: 1000;
+    }
 }
