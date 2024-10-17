@@ -1,0 +1,24 @@
+.barra{
+    height: 20vh;
+    background-color: #1D71B8;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    height: 12vh;
+    margin: 1.5vh;
+}
+
+.navbar-scrolled {
+    top: 0; /* La barra se moverá a la parte superior cuando el usuario haga scroll */
+}
+
+
+@media (max-width: 768px) {
+    /* Estilos para pantallas con un ancho máximo de 768px */
+    img{
+        height: 10Vh;
+        margin: 2.5vh;
+    }
+  }
