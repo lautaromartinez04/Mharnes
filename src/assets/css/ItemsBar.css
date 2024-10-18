@@ -7,7 +7,6 @@
 .opciones{
     font-family: "SegoeBold";
     width: 80vw;
-    height: 5vh;
     border-radius: 15px;
     background: #1d71b7;
     border: white solid 2px;
@@ -80,11 +79,6 @@
         opacity: 1;
         visibility: visible;
         border: #155a8a solid 1px;
-    }
-
-    .opciones{
-        height: 8vh;
-        display: none;
     }
 
     #navbarNavDropdown{
