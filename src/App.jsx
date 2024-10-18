@@ -15,6 +15,7 @@ export const App = () => {
             <NavBar />
             <ItemsBar />
             <Routes>
+                <Route path="/" element={<Inicio />} />
                 <Route path="/inicio" element={<Inicio />} />
                 <Route path="/AcercaDeNosotros" element={<AcercaDeNosotros />} />
                 <Route path="/NuestrasPracticas" element={<NuestrasPracticas />} />

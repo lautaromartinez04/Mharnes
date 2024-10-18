@@ -41,25 +41,16 @@ export const ItemsBar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
-              <li className="nav-item dropdown">
-                
-                <a to={"/inicio"} className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item">
+                <NavLink to={"/Inicio"} className="nav-link" href="#">
                   Inicio
-                </a>
-                
-                <ul className="dropdown-menu">
-                  <li><NavLink to={"/inicio/#innovacion"} className="dropdown-item" href="#">Innovacion y bienestar animal</NavLink ></li>
-                  <li><NavLink to={"/inicio/#circular"} className="dropdown-item" href="#">Economia circular</NavLink></li>
-                  <li><NavLink to={"/inicio/#excelencia"} className="dropdown-item" href="#">Excelencia Láctea</NavLink></li>
-                  <li><NavLink to={"/inicio/#compromiso"} className="dropdown-item" href="#">Compromiso Social</NavLink></li>
-                </ul>
+                </NavLink>
               </li>
-
 
               <li className="nav-item dropdown">
                 <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Sobre Nosotros
-                  </a>
+                </a>
                 <ul className="dropdown-menu">
                   <li><NavLink to={"/acercaDeNosotros/#historia"} className="dropdown-item" href="#">Historia</NavLink></li>
                   <li><NavLink to={"/acercaDeNosotros/#misionVision"} className="dropdown-item" href="#">Mision</NavLink></li>
