@@ -52,12 +52,12 @@ export const ItemsBar = () => {
                   Sobre Nosotros
                 </a>
                 <ul className="dropdown-menu">
-                  <li><NavLink to={"/acercaDeNosotros/#historia"} className="dropdown-item" href="#">Historia</NavLink></li>
-                  <li><NavLink to={"/acercaDeNosotros/#misionVision"} className="dropdown-item" href="#">Mision</NavLink></li>
-                  <li><NavLink to={"/acercaDeNosotros/#misionVision"} className="dropdown-item" href="#">Vision</NavLink></li>
-                  <li><NavLink to={"/acercaDeNosotros/#valores"} className="dropdown-item" href="#">Valores</NavLink></li>
-                  <li><NavLink to={"/acercaDeNosotros/#misionVision"} className="dropdown-item" href="#">Innovacion</NavLink></li>
-                  <li><NavLink to={"/acercaDeNosotros/#misionVision"} className="dropdown-item" href="#">Calidad</NavLink></li>
+                  <li><NavLink to={"/SobreNosotros/#historia"} className="dropdown-item" href="#">Historia</NavLink></li>
+                  <li><NavLink to={"/SobreNosotros/#misionVision"} className="dropdown-item" href="#">Mision</NavLink></li>
+                  <li><NavLink to={"/SobreNosotros/#misionVision"} className="dropdown-item" href="#">Vision</NavLink></li>
+                  <li><NavLink to={"/SobreNosotros/#valores"} className="dropdown-item" href="#">Valores</NavLink></li>
+                  <li><NavLink to={"/SobreNosotros/#misionVision"} className="dropdown-item" href="#">Innovacion</NavLink></li>
+                  <li><NavLink to={"/SobreNosotros/#misionVision"} className="dropdown-item" href="#">Calidad</NavLink></li>
                 </ul>
               </li>
 
