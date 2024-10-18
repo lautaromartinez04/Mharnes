@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import "../assets/css/ItemsBar.css";
 
@@ -41,14 +42,16 @@ export const ItemsBar = () => {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item dropdown">
-                <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                
+                <a to={"/inicio"} className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Inicio
-                  </a>
+                </a>
+                
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Innovacion y bienestar animal</a></li>
-                  <li><a className="dropdown-item" href="#">Economia circular</a></li>
-                  <li><a className="dropdown-item" href="#">Excelencia Láctea</a></li>
-                  <li><a className="dropdown-item" href="#">Compromiso Social</a></li>
+                  <li><NavLink to={"/inicio/#innovacion"} className="dropdown-item" href="#">Innovacion y bienestar animal</NavLink ></li>
+                  <li><NavLink to={"/inicio/#circular"} className="dropdown-item" href="#">Economia circular</NavLink></li>
+                  <li><NavLink to={"/inicio/#excelencia"} className="dropdown-item" href="#">Excelencia Láctea</NavLink></li>
+                  <li><NavLink to={"/inicio/#compromiso"} className="dropdown-item" href="#">Compromiso Social</NavLink></li>
                 </ul>
               </li>
 
@@ -58,12 +61,12 @@ export const ItemsBar = () => {
                   Sobre Nosotros
                   </a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Historia</a></li>
-                  <li><a className="dropdown-item" href="#">Mision</a></li>
-                  <li><a className="dropdown-item" href="#">Vision</a></li>
-                  <li><a className="dropdown-item" href="#">Valores</a></li>
-                  <li><a className="dropdown-item" href="#">Innovacion</a></li>
-                  <li><a className="dropdown-item" href="#">Calidad</a></li>
+                  <li><NavLink to={"/acercaDeNosotros/#historia"} className="dropdown-item" href="#">Historia</NavLink></li>
+                  <li><NavLink to={"/acercaDeNosotros/#misionVision"} className="dropdown-item" href="#">Mision</NavLink></li>
+                  <li><NavLink to={"/acercaDeNosotros/#misionVision"} className="dropdown-item" href="#">Vision</NavLink></li>
+                  <li><NavLink to={"/acercaDeNosotros/#valores"} className="dropdown-item" href="#">Valores</NavLink></li>
+                  <li><NavLink to={"/acercaDeNosotros/#misionVision"} className="dropdown-item" href="#">Innovacion</NavLink></li>
+                  <li><NavLink to={"/acercaDeNosotros/#misionVision"} className="dropdown-item" href="#">Calidad</NavLink></li>
                 </ul>
               </li>
 
@@ -72,10 +75,10 @@ export const ItemsBar = () => {
                   Nuestras practicas
                   </a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Bienestar animal</a></li>
-                  <li><a className="dropdown-item" href="#">Sostenibilidad ambiental</a></li>
-                  <li><a className="dropdown-item" href="#">Tecnologia avanzada</a></li>
-                  <li><a className="dropdown-item" href="#">Compromiso social</a></li>
+                  <li><NavLink to={"/NuestrasPracticas/#bienestar"} className="dropdown-item" href="#">Bienestar animal</NavLink></li>
+                  <li><NavLink to={"/NuestrasPracticas/#sostenibilidad"} className="dropdown-item" href="#">Sostenibilidad ambiental</NavLink></li>
+                  <li><NavLink to={"/NuestrasPracticas/#tecnologia"} className="dropdown-item" href="#">Tecnologia avanzada</NavLink></li>
+                  <li><NavLink to={"/NuestrasPracticas/#compromiso"} className="dropdown-item" href="#">Compromiso social</NavLink></li>
                 </ul>
               </li>
 
@@ -84,19 +87,19 @@ export const ItemsBar = () => {
                   Del aula al tambo
                   </a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Educación y Conciencia</a></li>
-                  <li><a className="dropdown-item" href="#">Experiencia Práctica</a></li>
-                  <li><a className="dropdown-item" href="#">Tecnología e Innovación</a></li>
-                  <li><a className="dropdown-item" href="#">Bienestar Animal</a></li>
-                  <li><a className="dropdown-item" href="#">Sostenibilidad</a></li>
+                  <li><NavLink to={"/DelAulaAlTambo/#educacion"} className="dropdown-item" href="#">Educación y Conciencia</NavLink></li>
+                  <li><NavLink to={"/DelAulaAlTambo/#experiencia"} className="dropdown-item" href="#">Experiencia Práctica</NavLink></li>
+                  <li><NavLink to={"/DelAulaAlTambo/#tecnologia"} className="dropdown-item" href="#">Tecnología e Innovación</NavLink></li>
+                  <li><NavLink to={"/DelAulaAlTambo/#Bienestar"} className="dropdown-item" href="#">Bienestar Animal</NavLink></li>
+                  <li><NavLink to={"/DelAulaAlTambo/#sostenibilidad"} className="dropdown-item" href="#">Sostenibilidad</NavLink></li>
                 </ul>
               </li>
-
-              <li className="nav-item">
-                <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Contacto
-                </a>
+              <li class="nav-item">
+                <NavLink to={"/contacto"} className="nav-link" href="#">
+                Contacto
+              </NavLink>
               </li>
+              
             </ul>
           </div>
         </div>
