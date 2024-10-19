@@ -1,36 +1,46 @@
-import React from "react";
-import { NavLink } from 'react-router-dom'
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from 'react-router-dom';
 import "../assets/css/ItemsBar.css";
 
 export const ItemsBar = () => {
-    const [navbarStyle, setNavbarStyle] = useState({
-        position: 'fixed',
-        width: '100vw',
-        top: '13vh', // Posición inicial
-        transition: 'top 0.3s ease', // Transición suave
+  const { hash } = useLocation(); // Hook para obtener el hash de la URL (por ejemplo, #bienestar)
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.substring(1)); // Eliminar el # y buscar el id del elemento
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Hacer scroll suave y centrar el elemento
+      }
+    }
+  }, [hash]); // Ejecutar cada vez que cambie el hash
+
+  const [navbarStyle, setNavbarStyle] = useState({
+    position: 'fixed',
+    width: '100vw',
+    top: '13vh', // Posición inicial
+    transition: 'top 0.3s ease', // Transición suave
+  });
+
+  const handleScroll = () => {
+    if (window.scrollY > 15) {
+      setNavbarStyle({
+        ...navbarStyle,
+        top: '5vh', // Mover a la parte superior cuando se haga scroll
       });
-    
-      const handleScroll = () => {
-        if (window.scrollY > 15) {
-          setNavbarStyle({
-            ...navbarStyle,
-            top: '5vh', // Mover a la parte superior cuando se haga scroll
-          });
-        } else {
-          setNavbarStyle({
-            ...navbarStyle,
-            top: '13vh', // Volver a la posición inicial si no se ha hecho scroll
-          });
-        }
-      };
-    
-      useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
+    } else {
+      setNavbarStyle({
+        ...navbarStyle,
+        top: '13vh', // Volver a la posición inicial si no se ha hecho scroll
+      });
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -41,8 +51,8 @@ export const ItemsBar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
-              <li class="nav-item">
-                <NavLink to={"/Inicio"} className="nav-link" href="#">
+              <li className="nav-item">
+                <NavLink to="/Inicio" className="nav-link">
                   Inicio
                 </NavLink>
               </li>
@@ -52,45 +62,46 @@ export const ItemsBar = () => {
                   Sobre Nosotros
                 </a>
                 <ul className="dropdown-menu">
-                  <li><NavLink to={"/SobreNosotros/#historia"} className="dropdown-item" href="#">Historia</NavLink></li>
-                  <li><NavLink to={"/SobreNosotros/#misionVision"} className="dropdown-item" href="#">Mision</NavLink></li>
-                  <li><NavLink to={"/SobreNosotros/#misionVision"} className="dropdown-item" href="#">Vision</NavLink></li>
-                  <li><NavLink to={"/SobreNosotros/#valores"} className="dropdown-item" href="#">Valores</NavLink></li>
-                  <li><NavLink to={"/SobreNosotros/#misionVision"} className="dropdown-item" href="#">Innovacion</NavLink></li>
-                  <li><NavLink to={"/SobreNosotros/#misionVision"} className="dropdown-item" href="#">Calidad</NavLink></li>
+                  <li><NavLink to="/SobreNosotros/#historia" className="dropdown-item">Historia</NavLink></li>
+                  <li><NavLink to="/SobreNosotros/#misionVision" className="dropdown-item">Misión</NavLink></li>
+                  <li><NavLink to="/SobreNosotros/#misionVision" className="dropdown-item">Visión</NavLink></li>
+                  <li><NavLink to="/SobreNosotros/#valores" className="dropdown-item">Valores</NavLink></li>
+                  <li><NavLink to="/SobreNosotros/#innovacion" className="dropdown-item">Innovación</NavLink></li>
+                  <li><NavLink to="/SobreNosotros/#calidad" className="dropdown-item">Calidad</NavLink></li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
                 <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Nuestras practicas
-                  </a>
+                  Nuestras prácticas
+                </a>
                 <ul className="dropdown-menu">
-                  <li><NavLink to={"/NuestrasPracticas/#bienestar"} className="dropdown-item" href="#">Bienestar animal</NavLink></li>
-                  <li><NavLink to={"/NuestrasPracticas/#sostenibilidad"} className="dropdown-item" href="#">Sostenibilidad ambiental</NavLink></li>
-                  <li><NavLink to={"/NuestrasPracticas/#tecnologia"} className="dropdown-item" href="#">Tecnologia avanzada</NavLink></li>
-                  <li><NavLink to={"/NuestrasPracticas/#compromiso"} className="dropdown-item" href="#">Compromiso social</NavLink></li>
+                  <li><NavLink to="/NuestrasPracticas/#bienestar" className="dropdown-item">Bienestar animal</NavLink></li>
+                  <li><NavLink to="/NuestrasPracticas/#sostenibilidad" className="dropdown-item">Sostenibilidad ambiental</NavLink></li>
+                  <li><NavLink to="/NuestrasPracticas/#tecnologia" className="dropdown-item">Tecnología avanzada</NavLink></li>
+                  <li><NavLink to="/NuestrasPracticas/#compromiso" className="dropdown-item">Compromiso social</NavLink></li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
                 <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Del aula al tambo
-                  </a>
+                </a>
                 <ul className="dropdown-menu">
-                  <li><NavLink to={"/DelAulaAlTambo/#educacion"} className="dropdown-item" href="#">Educación y Conciencia</NavLink></li>
-                  <li><NavLink to={"/DelAulaAlTambo/#experiencia"} className="dropdown-item" href="#">Experiencia Práctica</NavLink></li>
-                  <li><NavLink to={"/DelAulaAlTambo/#tecnologia"} className="dropdown-item" href="#">Tecnología e Innovación</NavLink></li>
-                  <li><NavLink to={"/DelAulaAlTambo/#Bienestar"} className="dropdown-item" href="#">Bienestar Animal</NavLink></li>
-                  <li><NavLink to={"/DelAulaAlTambo/#sostenibilidad"} className="dropdown-item" href="#">Sostenibilidad</NavLink></li>
+                  <li><NavLink to="/DelAulaAlTambo/#educacion" className="dropdown-item">Educación y Conciencia</NavLink></li>
+                  <li><NavLink to="/DelAulaAlTambo/#experiencia" className="dropdown-item">Experiencia Práctica</NavLink></li>
+                  <li><NavLink to="/DelAulaAlTambo/#tecnologia" className="dropdown-item">Tecnología e Innovación</NavLink></li>
+                  <li><NavLink to="/DelAulaAlTambo/#bienestar" className="dropdown-item">Bienestar Animal</NavLink></li>
+                  <li><NavLink to="/DelAulaAlTambo/#sostenibilidad" className="dropdown-item">Sostenibilidad</NavLink></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <NavLink to={"/contacto"} className="nav-link" href="#">
-                Contacto
-              </NavLink>
+
+              <li className="nav-item">
+                <NavLink to="/contacto" className="nav-link">
+                  Contacto
+                </NavLink>
               </li>
-              
+
             </ul>
           </div>
         </div>
