@@ -64,7 +64,7 @@ export const DelAulaAlTambo = () => {
           ¡Conoce más y coordina tu visita a Grupo Mharnes! A continuación, completá el formulario con los datos necesarios para contactarte con nosotros.
         </p>
         <NavLink to="/contacto"  className='btn btn-primary text-center mx-auto'>
-          <a className= "text-decoration-none text-light" href="">Conoce mas de nosotros aqui</a>
+          <a className= "text-decoration-none text-light" href="">Llena el formulario de visitas</a>
         </NavLink>
       </div>
       

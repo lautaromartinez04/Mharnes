@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-img{
+.logo{
     height: 12vh;
     margin: 1.5vh;
 }
@@ -17,7 +17,7 @@ img{
 
 @media (max-width: 768px) {
     /* Estilos para pantallas con un ancho máximo de 768px */
-    img{
+    .logo{
         height: 10Vh;
         margin: 2.5vh;
     }

@@ -7,7 +7,7 @@ export const NavBar = () => {
   return (
     <div className='barra'>
         <div>
-            <img src={imagen} alt="" />
+            <img className='logo' src={imagen} alt="" />
         </div>
     </div>
   )

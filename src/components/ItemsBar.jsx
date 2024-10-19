@@ -19,6 +19,7 @@ export const ItemsBar = () => {
     width: '100vw',
     top: '13vh', // Posición inicial
     transition: 'top 0.3s ease', // Transición suave
+    zIndex: '1000',
   });
 
   const handleScroll = () => {
