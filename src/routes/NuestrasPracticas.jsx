@@ -4,7 +4,7 @@ export const NuestrasPracticas = () => {
   return (
     <>
     <h1 className=' my-3 text-center'>Nuestras Practicas</h1>
-      <div id="bienestar" className='NuestrasPracticas border rounded p-3 mx-3 my-3' >
+      <div id="bienestar" className='border rounded p-3 mx-3 my-3' >
         <h2 className='text-center'>Bienestar Animal</h2>
         <p>
           En Grupo Mharnes, el bienestar de nuestras vacas es una prioridad. Creemos que un ambiente cómodo y 
@@ -33,7 +33,7 @@ export const NuestrasPracticas = () => {
         </ul>
       </div>
 
-      <div id="sostenibilidad" className='NuestrasPracticas border rounded p-3 mx-3 my-3' >
+      <div id="sostenibilidad" className='border rounded p-3 mx-3 my-3' >
         <h2 className='text-center'>Sostenibilidad Ambiental</h2>
         <p>
           La sostenibilidad es un pilar fundamental de nuestras prácticas. En Grupo Mharnes, implementamos varias iniciativas para minimizar nuestro impacto ambiental
@@ -62,7 +62,7 @@ export const NuestrasPracticas = () => {
         </ul>
       </div>
 
-      <div id="tecnologia" className='NuestrasPracticas border rounded p-3 mx-3 my-3' >
+      <div id="tecnologia" className='border rounded p-3 mx-3 my-3' >
         <h2 className='text-center'>Tecnología Avanzada</h2>
         <p>
           La innovación tecnológica es clave para mejorar nuestros procesos y la calidad de nuestros productos.
@@ -93,7 +93,7 @@ export const NuestrasPracticas = () => {
         </ul>
       </div>
 
-      <div id="compromiso" className='NuestrasPracticas border rounded p-3 mx-3 my-3' >
+      <div id="compromiso" className='border rounded p-3 mx-3 my-3' >
         <h2 className='text-center'>Compromiso Social</h2>
         <p>
           Entendemos que nuestras prácticas no solo impactan en nuestro tambo, 

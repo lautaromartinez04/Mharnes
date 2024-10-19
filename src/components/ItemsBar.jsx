@@ -63,8 +63,8 @@ export const ItemsBar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li><NavLink to="/SobreNosotros/#historia" className="dropdown-item">Historia</NavLink></li>
-                  <li><NavLink to="/SobreNosotros/#misionVision" className="dropdown-item">Misión</NavLink></li>
-                  <li><NavLink to="/SobreNosotros/#misionVision" className="dropdown-item">Visión</NavLink></li>
+                  <li><NavLink to="/SobreNosotros/#mision" className="dropdown-item">Misión</NavLink></li>
+                  <li><NavLink to="/SobreNosotros/#vision" className="dropdown-item">Visión</NavLink></li>
                   <li><NavLink to="/SobreNosotros/#valores" className="dropdown-item">Valores</NavLink></li>
                   <li><NavLink to="/SobreNosotros/#innovacion" className="dropdown-item">Innovación</NavLink></li>
                   <li><NavLink to="/SobreNosotros/#calidad" className="dropdown-item">Calidad</NavLink></li>
@@ -95,13 +95,6 @@ export const ItemsBar = () => {
                   <li><NavLink to="/DelAulaAlTambo/#sostenibilidad" className="dropdown-item">Sostenibilidad</NavLink></li>
                 </ul>
               </li>
-
-              <li className="nav-item">
-                <NavLink to="/contacto" className="nav-link">
-                  Contacto
-                </NavLink>
-              </li>
-
             </ul>
           </div>
         </div>

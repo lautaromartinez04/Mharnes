@@ -4,7 +4,7 @@
 }
 
 .active{
-    background-color: #1d71b7 !important;
+    background-color: #1d71b8 !important;
     border-radius: 15px !important;
 }
 
@@ -21,6 +21,7 @@
     font-size: 2vh;
     padding: 0;
     text-align: center;
+    box-shadow: #000000 0 0 5px;
 }
 
 .navbar-nav{
@@ -35,7 +36,7 @@
 
 /* Estilos del dropdown */
 .dropdown-menu {
-    background-color: #1d71b7;
+    background-color: #1d71b8;
     border-radius: 10px;
     border: none;
     padding: 10px 0;

@@ -7,7 +7,9 @@ import { SobreNosotros } from './routes/SobreNosotros'
 import { NuestrasPracticas } from './routes/NuestrasPracticas'
 import { DelAulaAlTambo } from './routes/DelAulaAlTambo'
 import { Contacto } from './routes/Contacto'
+import { Footer } from './components/Footer';
 import "./assets/css/index.css"
+
 
 export const App = () => {
     return (
@@ -23,6 +25,7 @@ export const App = () => {
                 <Route path="/Contacto" element={<Contacto />} />
                 <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
+            <Footer />
         </>
 
     )
