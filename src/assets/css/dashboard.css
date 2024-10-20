@@ -1,0 +1,17 @@
+.card{
+    border-color: #1d71b7;
+}
+
+.card-title{
+    color: #1d71b7;
+}
+
+.valor{
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.unidad{
+    color: #1d71b7;
+    font-size:large;
+}
