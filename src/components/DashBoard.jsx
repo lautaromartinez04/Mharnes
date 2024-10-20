@@ -29,7 +29,7 @@ export const DashBoard = () => {
             <div class="card-body">
                 <h5 class="card-title">Visitantes</h5>
                 <p class="card-text valor">198<span class="unidad">kWh</span></p>
-                <p class="card-text">desde el lanzamiento del programa <NavLink to="/DelAulaAlTambo">Del Aula Al Tambo</NavLink></p>
+                <p class="card-text">desde el lanzamiento del programa <NavLink to="/DelAulaAlTambo/#educacion">Del Aula Al Tambo</NavLink></p>
             </div>
             </div>
         </div>
