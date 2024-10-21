@@ -43,6 +43,13 @@ export const ItemsBar = () => {
     };
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Desplazamiento suave
+    });
+  };
+
   return (
     <>
       <nav style={navbarStyle} className="navbar navbar-expand-lg navbar-dark">
@@ -53,13 +60,13 @@ export const ItemsBar = () => {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink to="/Inicio" className="nav-link">
+                <NavLink to="/Inicio" onClick={scrollToTop} className="nav-link navboton">
                   Inicio
                 </NavLink>
               </li>
 
               <li className="nav-item dropdown">
-                <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a className="nav-link navboton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Sobre Nosotros
                 </a>
                 <ul className="dropdown-menu">
@@ -73,7 +80,7 @@ export const ItemsBar = () => {
               </li>
 
               <li className="nav-item dropdown">
-                <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a className="nav-link navboton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Nuestras prácticas
                 </a>
                 <ul className="dropdown-menu">
@@ -85,7 +92,7 @@ export const ItemsBar = () => {
               </li>
 
               <li className="nav-item dropdown">
-                <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a className="nav-link navboton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Del aula al tambo
                 </a>
                 <ul className="dropdown-menu">

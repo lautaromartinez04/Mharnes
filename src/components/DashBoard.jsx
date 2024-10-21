@@ -4,6 +4,14 @@ import { NavLink } from 'react-router-dom'
 import '../assets/css/dashboard.css'
 
 export const DashBoard = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth', // Desplazamiento suave
+        });
+      };
+
   return (
     <div class="row row-cols-1 row-cols-md-4 g-4 my-5 mx-3 text-center">
         <div class="col">
@@ -28,8 +36,8 @@ export const DashBoard = () => {
             <div class="card h-100">
             <div class="card-body">
                 <h5 class="card-title">Visitantes</h5>
-                <p class="card-text valor">198<span class="unidad">kWh</span></p>
-                <p class="card-text">desde el lanzamiento del programa <NavLink to="/DelAulaAlTambo/#educacion">Del Aula Al Tambo</NavLink></p>
+                <p class="card-text valor">198<span class="unidad"></span></p>
+                <p class="card-text">desde el lanzamiento del programa <NavLink to="/DelAulaAlTambo" onClick={scrollToTop}>Del Aula Al Tambo</NavLink></p>
             </div>
             </div>
         </div>

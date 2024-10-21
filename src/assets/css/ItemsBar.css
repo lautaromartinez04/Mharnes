@@ -12,6 +12,10 @@
     color: white !important;
 }
 
+.navboton{
+    font-size:medium;
+}
+
 .opciones{
     font-family: "SegoeBold";
     width: 80vw;

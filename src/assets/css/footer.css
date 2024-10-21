@@ -1,13 +1,34 @@
+@font-face {
+    font-family: "SegoeBold";
+    src: url('../fonts/SegoeTVBold.TTF');
+}
+
 .footer{
+    font-family: "SegoeBold";
     background-color: #1d71b7;
-    height: 25vh;
     display: flex;
     justify-content: start;
     align-items: end;
+    width: 100%;
+    margin: 0 !important;
 }
 
 .texto{
     color: white;
-    font-size: 20px;
-    margin-left:10px;
+    margin:0;
+}
+
+.imgfooter{
+    width: 100%;
+}
+
+.imglogofooter{
+    width: 50%;
+}
+
+.botonsubir{
+    background-color: #ffffff;
+    border: none;
+    color: #1d71b7;
+    margin-bottom: 4vh;
 }
